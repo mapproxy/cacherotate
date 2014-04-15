@@ -58,11 +58,11 @@ If the cache directory looks like this::
 
 You can use ``mapproxy_cacherotate`` to see what would happen::
 
-    mapproxy_cacherotate.py cache_data/osm_cache_EPSG3857 --from-level 1
+    ./mapproxy_cacherotate.py cache_data/osm_cache_EPSG3857 --from-level 1
 
 And actually rotate the levels with ::
 
-    mapproxy_cacherotate.py cache_data/osm_cache_EPSG3857 --from-level 1 --rotate
+    ./mapproxy_cacherotate.py cache_data/osm_cache_EPSG3857 --from-level 1 --rotate
 
 To get::
 
@@ -78,8 +78,8 @@ To get::
 The ``.last_rotate`` helps ``mapproxy_cacherotate`` to not rotate multiple times.
 You can remove that file with::
 
-    mapproxy_cacherotate.py cache_data/* --remove-locks
+    ./mapproxy_cacherotate.py cache_data/* --remove-locks
 
 You can also do the reverse: remove levels and rename 2 to 1 and 3 to 2::
 
-    mapproxy_cacherotate`` cache_data/* --drop-level 1 --rotate
+    ./mapproxy_cacherotate.py cache_data/* --drop-level 1 --rotate
