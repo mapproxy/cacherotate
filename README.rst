@@ -83,3 +83,6 @@ You can remove that file with::
 You can also do the reverse: remove levels and rename 2 to 1 and 3 to 2::
 
     ./mapproxy_cacherotate.py cache_data/* --drop-level 1 --rotate
+
+Dropped level are not removed because this could take a while for large caches. They will be renamed to ``01.dropped``, etc..
+
